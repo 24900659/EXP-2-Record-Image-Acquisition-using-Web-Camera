@@ -32,6 +32,8 @@ End the program and close the output video window by pressing 'q'.
 
 Program:
 Developed By: MOHANA K.V.S.L
+
+
 Register No: 212224240093
 ```
 ## i) Write the frame as JPG file
