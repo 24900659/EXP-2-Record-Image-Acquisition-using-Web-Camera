@@ -110,22 +110,45 @@ cap.release()
 
 ## iv) Rotate and display the video
 ```
-## iv) Rotate and display the video
+import cv2
+import matplotlib.pyplot as plt
+from IPython.display import clear_output
+import time
+
 cap = cv2.VideoCapture(0)
 
-for i in range(50):
-    ret, frame = cap.read()
-    if not ret:
-        break
-    rotated_frame = cv2.rotate(frame, cv2.ROTATE_90_CLOCKWISE)
-    frame_rgb = cv2.cvtColor(rotated_frame, cv2.COLOR_BGR2RGB)
-    clear_output(wait=True)
-    plt.imshow(frame_rgb)
-    plt.axis('off')
-    plt.show()
-    time.sleep(0.05)
+if not cap.isOpened():
+    print("Camera not detected!")
+else:
+    print("Camera started successfully")
 
-cap.release()
+    for i in range(50):
+        ret, frame = cap.read()
+
+        if not ret:
+            print("Cannot read frame")
+            break
+
+        rotated_frame = cv2.rotate(
+            frame, cv2.ROTATE_90_CLOCKWISE
+        )
+
+        frame_rgb = cv2.cvtColor(
+            rotated_frame, cv2.COLOR_BGR2RGB
+        )
+
+        clear_output(wait=True)
+        plt.figure(figsize=(5, 5))
+        plt.imshow(frame_rgb)
+        plt.title("Rotated Video")
+        plt.axis('off')
+        plt.show()
+        plt.close()
+
+        time.sleep(0.05)
+
+    cap.release()
+    print("Camera released")
 ```
 <img width="375" height="490" alt="image" src="https://github.com/user-attachments/assets/f5a22f3e-f936-479e-b21d-e503e7548e56" />
 
