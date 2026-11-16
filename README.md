@@ -51,9 +51,9 @@ plt.imshow(captured_image[:,:,::-1])
 plt.title('Captured Frame')
 plt.axis('off')
 plt.show()
-<img width="712" height="542" alt="image" src="https://github.com/user-attachments/assets/e5959e45-9ce3-456e-8d1d-8bc700c562bb" />
 
 ```
+<img width="697" height="537" alt="image" src="https://github.com/user-attachments/assets/666c45bb-3e27-4d01-b943-594f8fcee9b6" />
 
 
 
@@ -78,6 +78,7 @@ for i in range(50):
 cap.release()
 <img width="726" height="541" alt="image" src="https://github.com/user-attachments/assets/d65d85fc-65b2-4b95-835a-ccbb72ce905d" />
 ```
+<img width="722" height="542" alt="image" src="https://github.com/user-attachments/assets/92161fdc-6481-4faa-ad7a-9263a6298a44" />
 
 ## iii) Display the video by resizing the window
 ```
@@ -102,6 +103,8 @@ for i in range(50):
 cap.release()
 <img width="370" height="523" alt="image" src="https://github.com/user-attachments/assets/adf01183-9067-4525-a6da-3390cbecbbb7" />
 ```
+<img width="375" height="527" alt="image" src="https://github.com/user-attachments/assets/66478219-bdd9-4f9a-a7e8-98bdd92124df" />
+
 
 ## iv) Rotate and display the video
 ```
